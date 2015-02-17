@@ -1221,3 +1221,151 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/restaurants/new" for ::1 at 2015-02-17 16:55:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/new.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 135ms (Views: 115.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/assets/application-79e1233a68e5fdd328d8a2ea17ddef8a.js?body=1" for ::1 at 2015-02-17 16:55:59 +0000
+
+
+Started GET "/restaurants" for ::1 at 2015-02-17 16:56:06 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  Rendered restaurants/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/assets/application-79e1233a68e5fdd328d8a2ea17ddef8a.js?body=1" for ::1 at 2015-02-17 16:56:06 +0000
+
+
+Started GET "/restaurants/new" for ::1 at 2015-02-17 16:56:08 +0000
+Processing by RestaurantsController#new as HTML
+  Rendered restaurants/new.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2015-02-17 16:56:11 +0000
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"skOGvPXRnjdVEx0RCX5Tt0SMprdIRY0PIR9Gsq1z5s6TT8t/foWC21BNhkQXWuV79iGWluqrFa5ceZcAPEqgTw==", "restaurant"=>{"name"=>"KFC"}, "commit"=>"Create Restaurant"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.4ms)[0m  INSERT INTO "restaurants" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "KFC"], ["created_at", "2015-02-17 16:56:11.323674"], ["updated_at", "2015-02-17 16:56:11.323674"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 21ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-02-17 16:56:11 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/assets/application-79e1233a68e5fdd328d8a2ea17ddef8a.js?body=1" for ::1 at 2015-02-17 16:56:11 +0000
+
+
+Started GET "/restaurants/1" for ::1 at 2015-02-17 16:56:13 +0000
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered restaurants/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 72ms (Views: 65.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/restaurants/1" for ::1 at 2015-02-17 16:58:49 +0000
+Processing by RestaurantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xoZdjEVz+03rjNJQu+LOZ4h2HHAoUMtr+iBWDDzKobznihBPzifnoe7SSQWlxnirOtssUYq+U8qHRoe+rfPnPQ==", "id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-02-17 16:58:49 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  Rendered restaurants/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-17 16:58:49 +0000
+
+
+Started GET "/assets/application-79e1233a68e5fdd328d8a2ea17ddef8a.js?body=1" for ::1 at 2015-02-17 16:58:49 +0000
