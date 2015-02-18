@@ -3,15 +3,9 @@
     %h2
       = pluralize @restaurant.errors.count, "error"
       prohibited this restaurant from being saved:
-<<<<<<< HEAD
-    %ul
-      - @restaurant.errors.full_messages.each do |message|
-        %li= message
-=======
     %ul 
       - @restaurant.errors.full_messages.each do |message|
         %li = message
->>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
 
 = form_for @restaurant do |f|
   = f.label :name
