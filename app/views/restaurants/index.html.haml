@@ -1,13 +1,21 @@
 -if @restaurants.any?
   - @restaurants.each do |restaurant|
+<<<<<<< HEAD
     %h2= link_to restaurant.name, restaurant_path(restaurant)
     = link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant)
     = link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete
     = link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)
+=======
+    %h1= link_to restaurant.name, restaurant_path(restaurant)
+    %h5= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant)
+    %h5= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete
+    %h5= link_to "Review #{restaurant.name}", new_restaurant_review_path(restaurant)
+>>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
     %h3
       Reviews for
       = restaurant.name
 
+<<<<<<< HEAD
       - if restaurant.reviews.any?
         %ul
         - restaurant.reviews.each do |review|
@@ -18,6 +26,17 @@
       -else
         %p No reviews.
 
+=======
+      -if restaurant.reviews.any?
+        %ul
+          - restaurant.reviews.each do |review|
+            %li
+              = review.thoughts
+              %strong= review.rating
+              /5
+      -else 
+        %p No Reviews.
+>>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
 -else
   %h1 No restaurants yet!
 
