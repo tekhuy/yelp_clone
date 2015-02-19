@@ -2,6 +2,15 @@ require 'rails_helper'
 
 feature 'restaurants' do 
 
+  before do
+    visit('/')
+    click_link('Sign up')
+    fill_in('Email', with: 'test@example.com')
+    fill_in('Password', with: 'testtest')
+    fill_in('Password confirmation', with: 'testtest')
+    click_button('Sign up')
+  end
+
   context 'no restaurants have been added' do
 
     scenario 'should display a prompt to add a restaurant' do
@@ -23,11 +32,7 @@ feature 'restaurants' do
   end
 
   context 'creating restaurants' do
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
     scenario 'prompts user to fill out a form, then displays the new restaurant' do
       visit '/restaurants'
       click_link 'Add a restaurant'
@@ -36,14 +41,9 @@ feature 'restaurants' do
       expect(page).to have_content 'KFC'
       expect(current_path).to eq '/restaurants'
     end
-<<<<<<< HEAD
-    
-    context 'an invalid restaurant' do
-
-=======
 
     context 'an invalid restaurant' do
->>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
+
       it 'does not let you submit a name that is too short' do
         visit '/restaurants'
         click_link 'Add a restaurant'
@@ -52,13 +52,7 @@ feature 'restaurants' do
         expect(page).not_to have_css 'h2', text: 'kf'
         expect(page).to have_content 'error'
       end
-<<<<<<< HEAD
-
     end
-
-=======
-    end
->>>>>>> 9755b9c5c3cb268d8ea41d01baec790fdaee617d
   end
 
   context 'viewing restaurants' do
